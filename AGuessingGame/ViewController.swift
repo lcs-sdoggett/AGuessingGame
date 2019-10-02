@@ -12,7 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     // MARK: Properties
-    let targetNumebr = Int.random(in: 1...100)
+    let targetNumber = Int.random(in: 1...100)
     @IBOutlet weak var submittedGuess: UITextField!
     // MARK: Inisializers
     
@@ -51,6 +51,16 @@ class ViewController: UIViewController {
         // For testing purposes, what was the guess?
         
         print("For printing purposes, the guess made was \(guessNumber)")
+        
+        // Give the appropriate feedback to the user
+        
+        if guessNumber > targetNumber {
+            print("Guess lower next time")
+        } else if guessNumber < targetNumber {
+            print("Guess higher next time")
+        } else {
+            print("You are Correct!")
+        }
     }
     
 }
