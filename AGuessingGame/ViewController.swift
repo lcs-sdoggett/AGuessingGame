@@ -55,11 +55,52 @@ class ViewController: UIViewController {
         // Give the appropriate feedback to the user
         
         if guessNumber > targetNumber {
-            print("Guess lower next time")
+            
+            // Make an object named 'synthesizer', which is an instance of the class
+            // 'AVSpeechSynthesizer'
+            let synthesizer = AVSpeechSynthesizer()
+            
+            // Make a string that contains what we want the computer to say
+            let messageGuessLower = "Guess lower next time"
+           
+            // Make an object named 'utterance' which is an instance of the class
+            // AVSpeechUtterance
+            let utterance = AVSpeechUtterance(string: messageGuessLower)
+            
+            synthesizer.speak(utterance)
+            
         } else if guessNumber < targetNumber {
-            print("Guess higher next time")
+            
+            // Make an object named 'synthesizer', which is an instance of the class
+            // 'AVSpeechSynthesizer'
+            let synthesizer = AVSpeechSynthesizer()
+            
+            // Make a string that contains what we want the computer to say
+            let messageGuessHigher = "Guess higher next time"
+            
+            // Make an object named 'utterance' which is an instance of the class
+            // AVSpeechUtterance
+            let utterance = AVSpeechUtterance(string: messageGuessHigher)
+            
+            // Speak the message
+            synthesizer.speak(utterance)
+            
         } else {
-            print("You are Correct!")
+            
+            // Make an object named 'synthesizer', which is an instance of the class
+            // 'AVSpeechSynthesizer'
+            let synthesizer = AVSpeechSynthesizer()
+            
+            // Make a string that contains what we want the computer to say
+            let messageCorrect = "You are Correct!"
+            
+            // Make an object named 'utterance' which is an instance of the class
+            // AVSpeechUtterance
+            let utterance = AVSpeechUtterance(string: messageCorrect)
+            
+            // Speak the message
+            synthesizer.speak(utterance)
+
         }
     }
     
