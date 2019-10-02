@@ -11,11 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    
     // MARK: Properties
     
     
     // MARK: Inisializers
+    
     
     // MARK: Methods (functions) - behaviours
     
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         
         // Make a string that contains what we want the computer to say
         let message = "I'm thinking of a number between 1 and 100. Guess what it is."
-        
         
         // Make an object named 'utterance' which is an instance of the class
         // AVSpeechUtterance
